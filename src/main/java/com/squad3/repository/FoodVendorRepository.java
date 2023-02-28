@@ -7,5 +7,5 @@ import com.squad3.entity.FoodVendor;
 
 @Repository
 public interface FoodVendorRepository extends JpaRepository<FoodVendor, Long>{
-
+	FoodVendor findByVendor_vendorNameAndFoodName(String vendorName,String foodName);
 }
