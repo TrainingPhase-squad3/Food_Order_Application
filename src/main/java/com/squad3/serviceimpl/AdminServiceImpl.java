@@ -48,7 +48,8 @@ public class AdminServiceImpl implements AdminService {
 		}
 
 		List<FoodVendor> list = new ArrayList<>();
-		for (FoodVendorDto foodVendor : foodVendors) {
+		
+		foodVendors.forEach(foodVendor -> {
 			Vendor vendor = new Vendor();
 			vendor.setVendorName(foodVendor.getVendorName());
 			vendor.setLocation(foodVendor.getLocation());
@@ -59,8 +60,7 @@ public class AdminServiceImpl implements AdminService {
 			foodVendor2.setPrice(foodVendor.getPrice());
 			foodVendor2.setVendor(vendor);
 			list.add(foodVendor2);
-
-		}
+		});
 		foodVendorRepository.saveAll(list);
 		logger.info("food-vendors populated succcessfully");
 		ResponseStructure structure = new ResponseStructure();
