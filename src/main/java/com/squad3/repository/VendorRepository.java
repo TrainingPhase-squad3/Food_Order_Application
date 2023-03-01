@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.squad3.entity.Vendor;
 
 @Repository
-public interface VendorRepository extends JpaRepository<Vendor, Long>{
-	Vendor findByVendorNameIgnoreCase(String vendorName);
-	Vendor findByVendorNameContainingIgnoreCase(String name);
+public interface VendorRepository extends JpaRepository<Vendor, Long> {
+
 }

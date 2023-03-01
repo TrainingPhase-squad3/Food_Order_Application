@@ -5,5 +5,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.squad3.entity.OrderItem;
 
 public interface OrderItemRepository extends JpaRepository<OrderItem,Long>{
-	OrderItem findByVendorNameIgnoreCaseAndFoodNameIgnoreCase(String vendorName,String foodName);
-}
+	}

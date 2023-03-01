@@ -10410,3 +10410,61 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:272) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
 	... 38 common frames omitted
 
+2023-03-01 14:55:21.141  INFO 24872 --- [restartedMain] com.squad3.FoodOrderingApplication       : Starting FoodOrderingApplication using Java 17.0.4 on DESKTOP-GRG75SD with PID 24872 (D:\HCL_training\STS-tool\Food_Order_Application-main\target\classes started by Darshan S N in D:\HCL_training\STS-tool\Food_Order_Application-main)
+2023-03-01 14:55:21.142  INFO 24872 --- [restartedMain] com.squad3.FoodOrderingApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-03-01 14:55:21.178  INFO 24872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-01 14:55:21.178  INFO 24872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-01 14:55:21.697  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-01 14:55:21.741  INFO 24872 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 5 JPA repository interfaces.
+2023-03-01 14:55:22.151  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-01 14:55:22.160  INFO 24872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-01 14:55:22.160  INFO 24872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-03-01 14:55:22.222  INFO 24872 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-01 14:55:22.222  INFO 24872 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1042 ms
+2023-03-01 14:55:22.331  INFO 24872 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-01 14:55:22.369  INFO 24872 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-03-01 14:55:22.471  INFO 24872 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-01 14:55:22.538  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-01 14:55:22.801  INFO 24872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-01 14:55:22.825  INFO 24872 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-01 14:55:23.584  INFO 24872 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-01 14:55:23.593  INFO 24872 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-01 14:55:24.011  WARN 24872 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-01 14:55:24.889  INFO 24872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-01 14:55:24.968  INFO 24872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-01 14:55:24.981  INFO 24872 --- [restartedMain] com.squad3.FoodOrderingApplication       : Started FoodOrderingApplication in 4.111 seconds (JVM running for 4.692)
+2023-03-01 14:55:29.321  INFO 24872 --- [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-01 14:55:29.321  INFO 24872 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-01 14:55:29.325  INFO 24872 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-03-01 14:55:29.927  INFO 24872 --- [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 179 ms
+2023-03-01 14:55:36.849  INFO 24872 --- [http-nio-8080-exec-1] com.squad3.serviceimpl.AdminServiceImpl  : food-vendors populated succcessfully
+2023-03-01 14:56:12.145  INFO 24872 --- [http-nio-8080-exec-3] com.squad3.serviceimpl.AdminServiceImpl  : food-vendors populated succcessfully
+2023-03-01 15:15:34.953  INFO 24872 --- [RMI TCP Connection(22)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-01 15:15:34.976  INFO 24872 --- [RMI TCP Connection(22)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-01 15:15:34.979  INFO 24872 --- [RMI TCP Connection(22)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-01 15:15:34.991  INFO 24872 --- [RMI TCP Connection(22)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-01 15:15:34.994  INFO 24872 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-01 15:15:35.014  INFO 24872 --- [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-03-01 16:23:35.648  INFO 19588 --- [restartedMain] com.squad3.FoodOrderingApplication       : Starting FoodOrderingApplication using Java 17.0.4.1 on LAPTOP-O7N1N9K9 with PID 19588 (C:\Users\Chaitra Shetty\Desktop\FinalTemplate\Food_Order_Application\Food_Order_Application\target\classes started by Chaitra Shetty in C:\Users\Chaitra Shetty\Desktop\FinalTemplate\Food_Order_Application\Food_Order_Application)
+2023-03-01 16:23:35.650  INFO 19588 --- [restartedMain] com.squad3.FoodOrderingApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-03-01 16:23:35.705  INFO 19588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-01 16:23:35.705  INFO 19588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-01 16:23:36.585  INFO 19588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-01 16:23:36.656  INFO 19588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 5 JPA repository interfaces.
+2023-03-01 16:23:37.465  INFO 19588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-01 16:23:37.476  INFO 19588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-01 16:23:37.476  INFO 19588 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-03-01 16:23:37.564  INFO 19588 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-01 16:23:37.564  INFO 19588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1858 ms
+2023-03-01 16:23:37.724  INFO 19588 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-01 16:23:37.808  INFO 19588 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-03-01 16:23:38.079  INFO 19588 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-01 16:23:38.203  INFO 19588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-01 16:23:38.558  INFO 19588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-01 16:23:38.593  INFO 19588 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-01 16:23:39.627  INFO 19588 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-01 16:23:39.637  INFO 19588 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-01 16:23:39.801  WARN 19588 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-01 16:23:40.942  INFO 19588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-01 16:23:40.982  INFO 19588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-01 16:23:40.993  INFO 19588 --- [restartedMain] com.squad3.FoodOrderingApplication       : Started FoodOrderingApplication in 5.843 seconds (JVM running for 6.766)
