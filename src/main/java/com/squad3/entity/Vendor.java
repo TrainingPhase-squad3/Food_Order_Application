@@ -14,7 +14,7 @@ public class Vendor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long vendorId;
-	@Column(unique = true)
+	
 	private String vendorName;
 	
 	private String location;
