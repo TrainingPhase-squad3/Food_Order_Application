@@ -26,6 +26,13 @@ import com.squad3.repository.FoodVendorRepository;
 import com.squad3.repository.OrdersRepository;
 import com.squad3.repository.UserRepository;
 import com.squad3.repository.VendorRepository;
+import com.squad3.exception.InvalidTimeFrameException;
+import com.squad3.exception.NoOrderHistoryFoundException;
+import com.squad3.exception.UserIdNotFoundException;
+import com.squad3.repository.OrderItemRepository;
+
+import com.squad3.response.OrderHistoryResponse;
+
 import com.squad3.service.UserService;
 
 @Service
@@ -38,6 +45,8 @@ public class UserServiceImpl implements UserService {
 	private VendorRepository vendorRepository;
 	@Autowired
 	private UserRepository userRepository;
+  @Autowired
+	private OrderItemRepository orderItemRepository;
 	
 	private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
@@ -112,4 +121,38 @@ public class UserServiceImpl implements UserService {
 	}
 
 	
+}
+
+	@Override
+	public List<OrderHistoryResponse> getOrderHistory(Long userId, String timeframe) {
+
+		User users = userRepository.findById(userId)
+				.orElseThrow(() -> new UserIdNotFoundException("User not found with id: " + userId));
+
+		LocalDate startDate;
+		LocalDate endDate;
+
+		if (timeframe.equalsIgnoreCase("week")) {
+			startDate = LocalDate.now().minusDays(7);
+			endDate = LocalDate.now();
+		} else if (timeframe.equalsIgnoreCase("month")) {
+			startDate = LocalDate.now().minusMonths(1);
+			endDate = LocalDate.now();
+		} else {
+			throw new InvalidTimeFrameException("Invalid timeframe");
+		}
+		List<Orders> ordersList = ordersRepository.findByUser_UserIdAndOrderDateBetween(userId, startDate, endDate);
+		if (ordersList.isEmpty()) {
+			throw new NoOrderHistoryFoundException("No order history found for user id: " + userId);
+		}
+
+		return ordersList.stream().map(order -> {
+			List<OrderItem> orderItems = order
+					.getOrderItem().stream().map(orderItem -> new OrderItem(orderItem.getOrderItemId(),
+							orderItem.getFoodName(), orderItem.getVendorName(), orderItem.getQuantity()))
+					.collect(Collectors.toList());
+
+			return new OrderHistoryResponse(order.getOrderDate(), order.getTotalPrice(), orderItems);
+		}).collect(Collectors.toList());
+	}
 }
