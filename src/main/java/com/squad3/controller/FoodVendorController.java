@@ -36,8 +36,7 @@ public class FoodVendorController {
 	}
 
 
-	@Autowired
-	FoodVendorServiceImpl foodVendorServiceImpl;
+	
 	
 	@PostMapping
 	public ResponseEntity<ApiResponse> addFoodVendors() {
