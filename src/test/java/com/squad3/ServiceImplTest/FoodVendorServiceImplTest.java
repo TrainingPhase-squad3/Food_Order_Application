@@ -53,7 +53,7 @@ public class FoodVendorServiceImplTest {
 
 
 	@Test
-	public void testAddFoodVendors() throws IOException {
+	void testAddFoodVendors() throws IOException {
 
 		String[] foodVendorDto = { "idli,arabian,moodbidri,10,100.0", "veg-biriyani,saviruchi,davanagere,20,200.0" };
 		List<FoodVendor> expectedFoodVendors = new ArrayList<>();
