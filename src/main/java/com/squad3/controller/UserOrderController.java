@@ -27,6 +27,6 @@ public class UserOrderController {
 	
 	@PostMapping
 	public ResponseEntity<List<OrderItemDto>> placeOrder(@RequestBody @Valid OrdersDto ordersDto){
-		return null;
+		return  ResponseEntity.status(HttpStatus.CREATED).body(userService.placeOrder(ordersDto));
 	}
 }
