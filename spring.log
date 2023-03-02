@@ -10468,6 +10468,7 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2023-03-01 16:23:40.942  INFO 19588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2023-03-01 16:23:40.982  INFO 19588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2023-03-01 16:23:40.993  INFO 19588 --- [restartedMain] com.squad3.FoodOrderingApplication       : Started FoodOrderingApplication in 5.843 seconds (JVM running for 6.766)
+<<<<<<< HEAD
 2023-03-02 09:30:50.377  INFO 23716 --- [restartedMain] com.squad3.FoodOrderingApplication       : Starting FoodOrderingApplication using Java 17.0.4 on DESKTOP-GRG75SD with PID 23716 (D:\HCL_training\STS-tool\Food_Order_Application\target\classes started by Darshan S N in D:\HCL_training\STS-tool\Food_Order_Application)
 2023-03-02 09:30:50.383  INFO 23716 --- [restartedMain] com.squad3.FoodOrderingApplication       : No active profile set, falling back to 1 default profile: "default"
 2023-03-02 09:30:50.425  INFO 23716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
@@ -10496,3 +10497,42 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2023-03-02 09:31:04.048  INFO 23716 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2023-03-02 09:31:04.480  INFO 23716 --- [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 200 ms
 2023-03-02 09:31:09.229  INFO 23716 --- [http-nio-8080-exec-7] c.s.serviceimpl.FoodVendorServiceImpl    : food-vendors populated succcessfully
+=======
+2023-03-02 09:33:10.474  INFO 32676 --- [restartedMain] com.squad3.FoodOrderingApplication       : Starting FoodOrderingApplication using Java 17.0.4.1 on manu with PID 32676 (C:\Users\user\OneDrive\Desktop\squad3\Food_Order_Application\target\classes started by user in C:\Users\user\OneDrive\Desktop\squad3\Food_Order_Application)
+2023-03-02 09:33:10.475  INFO 32676 --- [restartedMain] com.squad3.FoodOrderingApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-03-02 09:33:10.521  INFO 32676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-02 09:33:10.521  INFO 32676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-02 09:33:11.117  INFO 32676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-02 09:33:11.166  INFO 32676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 5 JPA repository interfaces.
+2023-03-02 09:33:11.662  INFO 32676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-02 09:33:11.672  INFO 32676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-02 09:33:11.673  INFO 32676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-03-02 09:33:11.737  INFO 32676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-02 09:33:11.738  INFO 32676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1217 ms
+2023-03-02 09:33:11.865  INFO 32676 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-02 09:33:11.921  INFO 32676 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-03-02 09:33:12.057  INFO 32676 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-02 09:33:12.140  INFO 32676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-02 09:33:12.408  INFO 32676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-02 09:33:12.436  INFO 32676 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-02 09:33:13.094  INFO 32676 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-02 09:33:13.104  INFO 32676 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-02 09:33:13.467  WARN 32676 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-02 09:33:14.104  INFO 32676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-02 09:33:14.173  INFO 32676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-02 09:33:14.189  INFO 32676 --- [restartedMain] com.squad3.FoodOrderingApplication       : Started FoodOrderingApplication in 4.044 seconds (JVM running for 4.71)
+2023-03-02 09:33:22.471  INFO 32676 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-02 09:33:22.472  INFO 32676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-02 09:33:22.473  INFO 32676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-03-02 09:33:23.050  INFO 32676 --- [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 161 ms
+2023-03-02 09:33:34.468  WARN 32676 --- [http-nio-8080-exec-5] com.squad3.serviceimpl.UserServiceImpl   : empty list due to no specified food item
+2023-03-02 09:33:34.517  INFO 32676 --- [http-nio-8080-exec-5] com.squad3.serviceimpl.UserServiceImpl   : result contains searchHistory by vendor name
+2023-03-02 09:33:42.155  WARN 32676 --- [http-nio-8080-exec-6] com.squad3.serviceimpl.UserServiceImpl   : empty list due to no specified food item
+2023-03-02 09:33:42.170  WARN 32676 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.squad3.exception.NoSearchResultFoundException: no item or vendor found ]
+2023-03-02 09:34:27.314  INFO 32676 --- [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-02 09:34:27.324  INFO 32676 --- [RMI TCP Connection(5)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-02 09:34:27.325  INFO 32676 --- [RMI TCP Connection(5)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-02 09:34:27.331  INFO 32676 --- [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-02 09:34:27.334  INFO 32676 --- [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-03-02 09:34:27.349  INFO 32676 --- [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+>>>>>>> origin/manoj
