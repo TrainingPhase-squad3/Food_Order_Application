@@ -1,25 +1,25 @@
 
 package com.squad3.serviceimpl;
 
-<<<<<<< HEAD
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.List;
+
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-=======
+
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
->>>>>>> origin/manoj
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
+
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +28,7 @@ import com.squad3.entity.FoodVendor;
 import com.squad3.entity.Vendor;
 import com.squad3.repository.FoodVendorRepository;
 import com.squad3.response.ApiResponse;
-=======
+
 import org.springframework.stereotype.Service;
 
 import com.squad3.entity.FoodVendor;
@@ -37,7 +37,7 @@ import com.squad3.exception.NoSearchResultFoundException;
 import com.squad3.repository.FoodVendorRepository;
 import com.squad3.repository.VendorRepository;
 import com.squad3.response.SearchResponse;
->>>>>>> origin/manoj
+
 import com.squad3.service.FoodVendorService;
 
 @Service
@@ -88,10 +88,8 @@ public class FoodVendorServiceImpl implements FoodVendorService {
 
 	}
 
-	@Autowired
-	FoodVendorRepository foodVendorRepository;
+	
 
-	private static final Logger logger = LoggerFactory.getLogger(FoodVendorServiceImpl.class);
 
 	@Override
 	public ApiResponse addFoodVendors() {
