@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import com.squad3.response.ApiResponse=======
+import com.squad3.response.ApiResponse
 import com.squad3.response.SearchResponse;
 import com.squad3.serviceimpl.FoodVendorServiceImpl;
 
