@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.squad3.entity.Orders;
 
-@Repository
+
 public interface OrdersRepository extends JpaRepository<Orders, Long> {
 	List<Orders> findByUser_UserIdAndOrderDateBetween(Long userId, LocalDate startDate, LocalDate endDate);
 
