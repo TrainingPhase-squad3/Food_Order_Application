@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.squad3.entity.Vendor;
 
-@Repository
+
 public interface VendorRepository extends JpaRepository<Vendor, Long> {
 
 }
