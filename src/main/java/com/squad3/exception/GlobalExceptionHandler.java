@@ -29,7 +29,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		});
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
 	}
-<<<<<<< HEAD
+
 
 	@ExceptionHandler(value = NoSearchResultFoundException.class)
 	public ResponseEntity<ApiResponse> noSearchResultException(NoSearchResultFoundException exception) {
@@ -38,8 +38,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 				.body(new ApiResponse(exception.getLocalizedMessage(), HttpStatus.NOT_FOUND));
 
 	}
-
-=======
 	
 
 	@ExceptionHandler(UserIdNotFoundException.class)
@@ -60,8 +58,31 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
 
 	}
+	@ExceptionHandler(FoodItemNotFoundException.class)
+	public ResponseEntity<ApiResponse> handleFoodItemNotFoundException(FoodItemNotFoundException exception) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
+
+	}
+	@ExceptionHandler(RequestedQuantityNotAvailableException.class)
+	public ResponseEntity<ApiResponse> handleRequestedQuantityNotAvailableException(RequestedQuantityNotAvailableException exception) {
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.BAD_REQUEST));
+
+	}
+	@ExceptionHandler(UserNotFoundException .class)
+	public ResponseEntity<ApiResponse> handleUserNotFoundException (UserNotFoundException  exception) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
+
+	}
+	@ExceptionHandler(VendorNotFoundException.class)
+	public ResponseEntity<ApiResponse> handleVendorNotFoundException(VendorNotFoundException  exception) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
+
+	}
 	
 	
-	
->>>>>>> 513aa71789a872ac72fa7aed94c6df0af36ddeea
+
 }
