@@ -29,6 +29,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 		});
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
 	}
+<<<<<<< HEAD
 
 	@ExceptionHandler(value = NoSearchResultFoundException.class)
 	public ResponseEntity<ApiResponse> noSearchResultException(NoSearchResultFoundException exception) {
@@ -38,4 +39,29 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
 	}
 
+=======
+	
+
+	@ExceptionHandler(UserIdNotFoundException.class)
+	public ResponseEntity<ApiResponse> handleResourceNotFoundException(UserIdNotFoundException exception) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
+
+	}
+	@ExceptionHandler(NoOrderHistoryFoundException.class)
+	public ResponseEntity<ApiResponse> handleResourceNotFoundException(NoOrderHistoryFoundException exception) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
+
+	}
+	@ExceptionHandler(InvalidTimeFrameException.class)
+	public ResponseEntity<ApiResponse> handleResourceNotFoundException(InvalidTimeFrameException exception) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
+
+	}
+	
+	
+	
+>>>>>>> 513aa71789a872ac72fa7aed94c6df0af36ddeea
 }
