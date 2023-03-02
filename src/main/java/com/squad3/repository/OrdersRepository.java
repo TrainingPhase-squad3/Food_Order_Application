@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.squad3.entity.Orders;
 
-@Repository
+
 public interface OrdersRepository extends JpaRepository<Orders, Long> {
 
 }
