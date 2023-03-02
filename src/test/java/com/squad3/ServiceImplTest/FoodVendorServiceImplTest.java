@@ -2,13 +2,13 @@
 package com.squad3.ServiceImplTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-<<<<<<< HEAD
+
 import static org.mockito.Mockito.when;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-=======
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -17,22 +17,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
->>>>>>> origin/manoj
+
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-<<<<<<< HEAD
+import com.squad3.exception.NoSearchResultFoundException;
+import com.squad3.repository.FoodVendorRepository;
+import com.squad3.repository.VendorRepository;
+import com.squad3.response.SearchResponse;
+import com.squad3.serviceimpl.FoodVendorServiceImpl;
 import org.springframework.http.HttpStatus;
-=======
 import org.mockito.Mockito;
->>>>>>> origin/manoj
+
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.squad3.entity.FoodVendor;
 import com.squad3.entity.Vendor;
-<<<<<<< HEAD
+
 import com.squad3.repository.FoodVendorRepository;
 import com.squad3.response.ApiResponse;
 import com.squad3.serviceimpl.FoodVendorServiceImpl;
@@ -44,6 +47,9 @@ public class FoodVendorServiceImplTest {
 
 	@Mock
 	FoodVendorRepository foodVendorRepository;
+	
+	@Mock
+	VendorRepository vendorRepository;
 
 
 	@Test
@@ -72,23 +78,9 @@ public class FoodVendorServiceImplTest {
 		
 	}
 	
-=======
-import com.squad3.exception.NoSearchResultFoundException;
-import com.squad3.repository.FoodVendorRepository;
-import com.squad3.repository.VendorRepository;
-import com.squad3.response.SearchResponse;
-import com.squad3.serviceimpl.FoodVendorServiceImpl;
 
-@ExtendWith(SpringExtension.class)
-class FoodVendorServiceImplTest {
-	@InjectMocks
-	FoodVendorServiceImpl foodVendorServiceImpl;
 
-	@Mock
-	FoodVendorRepository foodVendorRepository;
 
-	@Mock
-	VendorRepository vendorRepository;
 
 	@Test
 	void testSearchByItemName() {
@@ -188,5 +180,4 @@ class FoodVendorServiceImplTest {
 
 	}
 
->>>>>>> origin/manoj
 }
