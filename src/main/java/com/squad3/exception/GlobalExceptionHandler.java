@@ -17,7 +17,7 @@ import com.squad3.response.ApiResponse;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
-	
+
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
@@ -28,6 +28,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 			errors.put(fieldName, message);
 		});
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
+	}
+
+
+	@ExceptionHandler(value = NoSearchResultFoundException.class)
+	public ResponseEntity<ApiResponse> noSearchResultException(NoSearchResultFoundException exception) {
+
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getLocalizedMessage(), HttpStatus.NOT_FOUND));
+
 	}
 	
 
@@ -49,7 +58,31 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
 
 	}
+	@ExceptionHandler(FoodItemNotFoundException.class)
+	public ResponseEntity<ApiResponse> handleFoodItemNotFoundException(FoodItemNotFoundException exception) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
+
+	}
+	@ExceptionHandler(RequestedQuantityNotAvailableException.class)
+	public ResponseEntity<ApiResponse> handleRequestedQuantityNotAvailableException(RequestedQuantityNotAvailableException exception) {
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.BAD_REQUEST));
+
+	}
+	@ExceptionHandler(UserNotFoundException .class)
+	public ResponseEntity<ApiResponse> handleUserNotFoundException (UserNotFoundException  exception) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
+
+	}
+	@ExceptionHandler(VendorNotFoundException.class)
+	public ResponseEntity<ApiResponse> handleVendorNotFoundException(VendorNotFoundException  exception) {
+		return ResponseEntity.status(HttpStatus.NOT_FOUND)
+				.body(new ApiResponse(exception.getMessage(), HttpStatus.NOT_FOUND));
+
+	}
 	
 	
-	
+
 }
