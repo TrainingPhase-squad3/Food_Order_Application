@@ -104,6 +104,7 @@ class UserServiceImplTest {
 		assertEquals(3, result.get(1).getQuantity());
 
 	}
+	
 	@Test
 	void testPlaceOrderUserNotFound() {
 		OrderItemDto orderItemDto = new OrderItemDto();
@@ -177,6 +178,7 @@ class UserServiceImplTest {
 		userService.getOrderHistory(-1L, "week");
 	}
 
+
 	@Test
 	public void getOrderHistoryTest() {
 		Long userId = 1L;
@@ -195,6 +197,7 @@ class UserServiceImplTest {
 		Mockito.when(ordersRepository.findByUser_UserIdAndOrderDateBetween(anyLong(), any(LocalDate.class),
 				any(LocalDate.class))).thenReturn(ordersList);
 
+
 		List<OrderHistoryResponse> orderHistory = userServiceImpl.getOrderHistory(userId, timeframe);
 
 		assertNotNull(orderHistory);
@@ -203,6 +206,10 @@ class UserServiceImplTest {
 		assertEquals(order1.getTotalPrice(), orderHistory.get(0).getTotalPrice());
 		assertEquals(order1.getOrderItem().size(), orderHistory.get(0).getOrderIem().size());
 	}
+
+	
+
+
 
 	@Test
 	public void getOrderHistoryInvalidTimeframeTest() {
@@ -214,6 +221,7 @@ class UserServiceImplTest {
 	}
 
 	@Test
+
 	public void getOrderHistoryNoOrderHistoryFoundTestForWeek() {
 		Long userId = 1L;
 		String timeframe = "week";
@@ -234,6 +242,7 @@ class UserServiceImplTest {
 
 		userService.getOrderHistory(userId, timeframe);
 	}
+
 
 
 }
